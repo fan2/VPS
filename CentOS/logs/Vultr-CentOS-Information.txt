@@ -1,0 +1,165 @@
+[root@vfan ~]# date
+Mon Dec 25 15:05:22 UTC 2017
+
+[root@vfan ~]# whoami
+root
+
+################################################################################
+# LANG
+################################################################################
+[root@vfan ~]# echo $LANG
+en_US.UTF-8
+[root@vfan ~]# echo $LC_CTYPE
+UTF-8
+[root@vfan ~]# 
+
+################################################################################
+# cpuinfo
+################################################################################
+[root@vfan ~]# arch
+x86_64
+
+[root@vfan ~]# lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                1
+On-line CPU(s) list:   0
+Thread(s) per core:    1
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 61
+Model name:            Virtual CPU a7769a6388d5
+Stepping:              2
+CPU MHz:               2394.454
+BogoMIPS:              4788.90
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              4096K
+L3 cache:              16384K
+NUMA node0 CPU(s):     0
+
+[root@vfan ~]# cat /proc/cpuinfo
+processor   : 0
+vendor_id   : GenuineIntel
+cpu family  : 6
+model       : 61
+model name  : Virtual CPU a7769a6388d5
+stepping    : 2
+microcode   : 0x1
+cpu MHz     : 2394.454
+cache size  : 16384 KB
+physical id : 0
+siblings    : 1
+core id     : 0
+cpu cores   : 1
+apicid      : 0
+initial apicid  : 0
+fpu     : yes
+fpu_exception   : yes
+cpuid level : 13
+wp      : yes
+flags       : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm arat fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bogomips    : 4788.90
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 40 bits physical, 48 bits virtual
+power management:
+
+################################################################################
+# OSTYPE
+################################################################################
+[root@vfan ~]# echo $OSTYPE
+linux-gnu
+[root@vfan ~]# echo $HOSTTYPE
+x86_64
+[root@vfan ~]# echo $MACHTYPE
+x86_64-redhat-linux-gnu
+
+################################################################################
+# uname
+################################################################################
+[root@vfan ~]# uname -mrs
+Linux 3.10.0-514.26.2.el7.x86_64 x86_64
+
+[root@vfan ~]# uname -a
+Linux vfan 3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+################################################################################
+# version & issue
+################################################################################
+[root@vfan ~]# cat /proc/version
+Linux version 3.10.0-514.26.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) ) #1 SMP Tue Jul 4 15:04:05 UTC 2017
+
+[root@vfan ~]# cat /boot/issue.txt
+cat: /boot/issue.txt: No such file or directory
+
+[root@vfan ~]# cat /etc/issue
+\S
+Kernel \r on an \m
+
+[root@vcentos ~]# cat /etc/redhat-release
+CentOS Linux release 7.3.1611 (Core) 
+
+################################################################################
+# python
+################################################################################
+[root@vcentos ~]# python
+python     python2    python2.7  
+[root@vcentos ~]# python -V
+Python 2.7.5
+
+################################################################################
+# wget
+################################################################################
+[root@vcentos ~]# wget -V
+GNU Wget 1.14 built on linux-gnu.
+
++digest +https +ipv6 +iri +large-file +nls +ntlm +opie +ssl/openssl 
+
+Wgetrc: 
+    /etc/wgetrc (system)
+Locale: /usr/share/locale 
+Compile: gcc -DHAVE_CONFIG_H -DSYSTEM_WGETRC="/etc/wgetrc" 
+    -DLOCALEDIR="/usr/share/locale" -I. -I../lib -I../lib -O2 -g -pipe 
+    -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong 
+    --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic 
+Link: gcc -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions 
+    -fstack-protector-strong --param=ssp-buffer-size=4 
+    -grecord-gcc-switches -m64 -mtune=generic -lssl -lcrypto 
+    /usr/lib64/libssl.so /usr/lib64/libcrypto.so /usr/lib64/libz.so 
+    -ldl -lz -lz -lidn -luuid -lpcre ftp-opie.o openssl.o http-ntlm.o 
+    ../lib/libgnu.a 
+
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later
+<http://www.gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Originally written by Hrvoje Niksic <hniksic@xemacs.org>.
+Please send bug reports and questions to <bug-wget@gnu.org>.
+
+################################################################################
+# curl
+################################################################################
+[root@vcentos ~]# curl -V
+curl 7.29.0 (x86_64-redhat-linux-gnu) libcurl/7.29.0 NSS/3.21 Basic ECC zlib/1.2.7 libidn/1.28 libssh2/1.4.3
+Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp scp sftp smtp smtps telnet tftp 
+Features: AsynchDNS GSS-Negotiate IDN IPv6 Largefile NTLM NTLM_WB SSL libz unix-sockets 
+
+
+
+################################################################################
+# other test
+################################################################################
+[root@vfan ~]# lsb_release -a
+-bash: lsb_release: command not found
+
+[root@vfan ~]# gcc -v
+-bash: gcc: command not found
