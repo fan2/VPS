@@ -1,0 +1,196 @@
+################################################################################
+# yum deplist python34
+################################################################################
+[root@vcentos ~]# yum deplist python34
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.xmission.com
+ * epel: mirrors.develooper.com
+ * extras: mirrors.xmission.com
+ * updates: mirrors.xmission.com
+package: python34.x86_64 3.4.5-5.el7
+  dependency: libc.so.6(GLIBC_2.3.4)(64bit)
+   provider: glibc.x86_64 2.17-196.el7_4.2
+  dependency: libdl.so.2()(64bit)
+   provider: glibc.x86_64 2.17-196.el7_4.2
+  dependency: libm.so.6()(64bit)
+   provider: glibc.x86_64 2.17-196.el7_4.2
+  dependency: libpthread.so.0()(64bit)
+   provider: glibc.x86_64 2.17-196.el7_4.2
+  dependency: libpython3.4m.so.1.0()(64bit)
+   provider: python34-libs.x86_64 3.4.5-5.el7
+  dependency: libutil.so.1()(64bit)
+   provider: glibc.x86_64 2.17-196.el7_4.2
+  dependency: python34-libs(x86-64) = 3.4.5-5.el7
+   provider: python34-libs.x86_64 3.4.5-5.el7
+
+
+
+################################################################################
+# yum install python34
+################################################################################
+[root@vcentos ~]# yum install python34
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.xmission.com
+ * epel: mirrors.develooper.com
+ * extras: mirrors.xmission.com
+ * updates: mirrors.xmission.com
+Resolving Dependencies
+--> Running transaction check
+---> Package python34.x86_64 0:3.4.5-5.el7 will be installed
+--> Processing Dependency: python34-libs(x86-64) = 3.4.5-5.el7 for package: python34-3.4.5-5.el7.x86_64
+--> Processing Dependency: libpython3.4m.so.1.0()(64bit) for package: python34-3.4.5-5.el7.x86_64
+--> Running transaction check
+---> Package python34-libs.x86_64 0:3.4.5-5.el7 will be installed
+--> Processing Dependency: libcrypto.so.10(OPENSSL_1.0.2)(64bit) for package: python34-libs-3.4.5-5.el7.x86_64
+--> Running transaction check
+---> Package openssl-libs.x86_64 1:1.0.1e-60.el7_3.1 will be updated
+--> Processing Dependency: openssl-libs(x86-64) = 1:1.0.1e-60.el7_3.1 for package: 1:openssl-1.0.1e-60.el7_3.1.x86_64
+---> Package openssl-libs.x86_64 1:1.0.2k-8.el7 will be an update
+--> Running transaction check
+---> Package openssl.x86_64 1:1.0.1e-60.el7_3.1 will be updated
+---> Package openssl.x86_64 1:1.0.2k-8.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================================
+ Package                   Arch               Version                    Repository        Size
+================================================================================================
+Installing:
+ python34                  x86_64             3.4.5-5.el7                epel              51 k
+Installing for dependencies:
+ python34-libs             x86_64             3.4.5-5.el7                epel             8.2 M
+Updating for dependencies:
+ openssl                   x86_64             1:1.0.2k-8.el7             base             492 k
+ openssl-libs              x86_64             1:1.0.2k-8.el7             base             1.2 M
+
+Transaction Summary
+================================================================================================
+Install  1 Package  (+1 Dependent package)
+Upgrade             ( 2 Dependent packages)
+
+Total download size: 9.9 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+warning: /var/cache/yum/x86_64/7/epel/packages/python34-libs-3.4.5-5.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for python34-libs-3.4.5-5.el7.x86_64.rpm is not installed
+(1/4): python34-libs-3.4.5-5.el7.x86_64.rpm                              | 8.2 MB  00:00:00     
+(2/4): openssl-1.0.2k-8.el7.x86_64.rpm                                   | 492 kB  00:00:00     
+(3/4): openssl-libs-1.0.2k-8.el7.x86_64.rpm                              | 1.2 MB  00:00:00     
+(4/4): python34-3.4.5-5.el7.x86_64.rpm                                   |  51 kB  00:00:00     
+------------------------------------------------------------------------------------------------
+Total                                                            11 MB/s | 9.9 MB  00:00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-9.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:openssl-libs-1.0.2k-8.el7.x86_64                                           1/6 
+  Installing : python34-3.4.5-5.el7.x86_64                                                  2/6 
+  Installing : python34-libs-3.4.5-5.el7.x86_64                                             3/6 
+  Updating   : 1:openssl-1.0.2k-8.el7.x86_64                                                4/6 
+  Cleanup    : 1:openssl-1.0.1e-60.el7_3.1.x86_64                                           5/6 
+  Cleanup    : 1:openssl-libs-1.0.1e-60.el7_3.1.x86_64                                      6/6 
+  Verifying  : 1:openssl-1.0.2k-8.el7.x86_64                                                1/6 
+  Verifying  : python34-libs-3.4.5-5.el7.x86_64                                             2/6 
+  Verifying  : 1:openssl-libs-1.0.2k-8.el7.x86_64                                           3/6 
+  Verifying  : python34-3.4.5-5.el7.x86_64                                                  4/6 
+  Verifying  : 1:openssl-1.0.1e-60.el7_3.1.x86_64                                           5/6 
+  Verifying  : 1:openssl-libs-1.0.1e-60.el7_3.1.x86_64                                      6/6 
+
+Installed:
+  python34.x86_64 0:3.4.5-5.el7                                                                 
+
+Dependency Installed:
+  python34-libs.x86_64 0:3.4.5-5.el7                                                            
+
+Dependency Updated:
+  openssl.x86_64 1:1.0.2k-8.el7                openssl-libs.x86_64 1:1.0.2k-8.el7               
+
+Complete!
+
+
+
+################################################################################
+# python3 -V
+################################################################################
+[root@vcentos ~]# python
+python      python2     python2.7   python3     python3.4   python3.4m  
+[root@vcentos ~]# python3 -V
+Python 3.4.5
+
+
+
+[root@vcentos ~]# pip
+-bash: pip: command not found
+
+
+################################################################################
+# wget 下载 get-pip.py
+################################################################################
+[root@vcentos ~]# wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+--2017-12-25 16:16:45--  https://bootstrap.pypa.io/get-pip.py
+Resolving bootstrap.pypa.io (bootstrap.pypa.io)... 151.101.24.175
+Connecting to bootstrap.pypa.io (bootstrap.pypa.io)|151.101.24.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1595408 (1.5M) [text/x-python]
+Saving to: 'get-pip.py'
+
+100%[======================================================>] 1,595,408   --.-K/s   in 0.04s   
+
+2017-12-25 16:16:45 (41.6 MB/s) - 'get-pip.py' saved [1595408/1595408]
+
+################################################################################
+# python2 get-pip.py 安装 pip(2)
+################################################################################
+[root@vcentos ~]# python2 get-pip.py
+Collecting pip
+  Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
+    100% |################################| 1.3MB 788kB/s 
+Collecting setuptools
+  Downloading setuptools-38.2.5-py2.py3-none-any.whl (489kB)
+    100% |################################| 491kB 2.2MB/s 
+Collecting wheel
+  Downloading wheel-0.30.0-py2.py3-none-any.whl (49kB)
+    100% |################################| 51kB 8.7MB/s 
+Installing collected packages: pip, setuptools, wheel
+Successfully installed pip-9.0.1 setuptools-38.2.5 wheel-0.30.0
+
+[root@vcentos ~]# pip
+pip     pip2    pip2.7
+
+[root@vcentos ~]# pip -V
+pip 9.0.1 from /usr/lib/python2.7/site-packages (python 2.7)
+
+[root@vcentos ~]# pip2 -V
+pip 9.0.1 from /usr/lib/python2.7/site-packages (python 2.7)
+
+################################################################################
+# python3 get-pip.py 安装 pip(3)
+################################################################################
+[root@vcentos ~]# python3 get-pip.py 
+Collecting pip
+  Using cached pip-9.0.1-py2.py3-none-any.whl
+Collecting setuptools
+  Using cached setuptools-38.2.5-py2.py3-none-any.whl
+Collecting wheel
+  Using cached wheel-0.30.0-py2.py3-none-any.whl
+Installing collected packages: pip, setuptools, wheel
+Successfully installed pip-9.0.1 setuptools-38.2.5 wheel-0.30.0
+
+[root@vcentos ~]# pip
+pip     pip2    pip2.7  pip3    pip3.4
+
+[root@vcentos ~]# pip3 -V
+pip 9.0.1 from /usr/lib/python3.4/site-packages (python 3.4)

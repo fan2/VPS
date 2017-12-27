@@ -4,6 +4,8 @@
 
 [CentOS6.x 安装升级Python2.7.x Python3.4.x](https://www.zhangfangzhou.cn/centos-update-python.html)  
 
+[How to Install Pip on CentOS 7](https://www.liquidweb.com/kb/how-to-install-pip-on-centos-7/)  
+[CentOS 安装easy_install、pip的方法](http://www.cnblogs.com/linkxu1989/p/6934270.html)  
 
 [centos 7 yum 安装 python3](http://www.cnblogs.com/elodio/p/4900160.html)  
 [**centos6安装python3.4和pip3**](http://www.cnblogs.com/toSeek/p/6192481.html)  
