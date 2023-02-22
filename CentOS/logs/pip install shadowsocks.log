@@ -91,9 +91,9 @@ Successfully installed shadowsocks-2.8.2
 [root@vcentos ~]# ssserver -c /etc/shadowsocks.json -d start
 INFO: loading config from /etc/shadowsocks.json
 Traceback (most recent call last):
-  File "/usr/lib/python3.4/site-packages/shadowsocks/shell.py", line 151, in get_config
+  File "/usr/lib/python3.4/site-packages/shadowsocks/Shell.py", line 151, in get_config
     config = parse_json_in_str(f.read().decode('utf8'))
-  File "/usr/lib/python3.4/site-packages/shadowsocks/shell.py", line 365, in parse_json_in_str
+  File "/usr/lib/python3.4/site-packages/shadowsocks/Shell.py", line 365, in parse_json_in_str
     return json.loads(data, object_hook=_decode_dict)
   File "/usr/lib64/python3.4/json/__init__.py", line 331, in loads
     return cls(**kw).decode(s)
@@ -109,8 +109,8 @@ Traceback (most recent call last):
   File "/usr/bin/ssserver", line 11, in <module>
     sys.exit(main())
   File "/usr/lib/python3.4/site-packages/shadowsocks/server.py", line 34, in main
-    config = shell.get_config(False)
-  File "/usr/lib/python3.4/site-packages/shadowsocks/shell.py", line 154, in get_config
+    config = Shell.get_config(False)
+  File "/usr/lib/python3.4/site-packages/shadowsocks/Shell.py", line 154, in get_config
     e.message)
 AttributeError: 'ValueError' object has no attribute 'message'
 
@@ -159,8 +159,8 @@ Uninstalling shadowsocks-2.8.2:
   /usr/lib/python3.4/site-packages/shadowsocks/manager.pyc
   /usr/lib/python3.4/site-packages/shadowsocks/server.py
   /usr/lib/python3.4/site-packages/shadowsocks/server.pyc
-  /usr/lib/python3.4/site-packages/shadowsocks/shell.py
-  /usr/lib/python3.4/site-packages/shadowsocks/shell.pyc
+  /usr/lib/python3.4/site-packages/shadowsocks/Shell.py
+  /usr/lib/python3.4/site-packages/shadowsocks/Shell.pyc
   /usr/lib/python3.4/site-packages/shadowsocks/tcprelay.py
   /usr/lib/python3.4/site-packages/shadowsocks/tcprelay.pyc
   /usr/lib/python3.4/site-packages/shadowsocks/udprelay.py

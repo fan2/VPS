@@ -1,0 +1,31 @@
+
+```Shell
+faner@MBPFAN-MB0:~|⇒  brew search shadowsocks
+==> Searching local taps...
+shadowsocks-libev
+==> Searching taps on GitHub...
+Error: GitHub 
+The GitHub credentials in the macOS keychain may be invalid.
+Clear them with:
+  printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain erase
+Or create a personal access token:
+  https://github.com/settings/tokens/new?scopes=gist,public_repo&description=Homebrew
+and then set the token as: export HOMEBREW_GITHUB_API_TOKEN="your_new_token"
+```
+
+```Shell
+faner@MBPFAN-MB0:~|⇒  brew info shadowsocks-libev
+shadowsocks-libev: stable 3.1.0 (bottled)
+Libev port of shadowsocks
+https://github.com/shadowsocks/shadowsocks-libev
+Not installed
+From: https://mirrors.ustc.edu.cn/homebrew-core.git/Formula/shadowsocks-libev.rb
+==> Dependencies
+Build: asciidoc ✘, xmlto ✘
+Required: c-ares ✘, libev ✘, libsodium ✘, mbedtls ✘, pcre ✔
+==> Caveats
+To have launchd start shadowsocks-libev now and restart at login:
+  brew services start shadowsocks-libev
+Or, if you don't want/need a background service you can just run:
+  /usr/local/opt/shadowsocks-libev/bin/ss-local -c /usr/local/etc/shadowsocks-libev.json -u
+```
