@@ -101,9 +101,13 @@ Status 为 Installing：
 
 `Cloud Compute` (Shared vCPU), Starting from $2.50/mo
 
+> Vultr Cloud Compute（VC2）就是普通的VPS。
+
 ## CPU & Storage Technology
 
 `AMD High Performance` —— Default
+
+> 如果选择 Intel Regular Performance，并且 Disable Auto Backups，低至 $5/month。
 
 ## Server Location
 
@@ -114,6 +118,8 @@ Status 为 Installing：
 ## Server Image
 
 `CentOS` 7x64
+
+> 默认是 Debian，也可选择 Ubuntu。
 
 ## Server Size
 

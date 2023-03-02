@@ -27,25 +27,38 @@ v2rayN & V2rayU:
 
 ## vultr+v2ray
 
+[自建v2ray服务器教程](https://github.com/Alvin9999/new-pac/wiki/%E8%87%AA%E5%BB%BAv2ray%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B)
 [2023最新V2Ray搭建图文教程](https://www.itblogcn.com/article/406.html)
 
 ### server安装v2ray service
 
 本地通过 ssh 命令连接上远程服务器之后，输入以下命令一键安装V2Ray脚本到 vultr server instance 上。
 
-- [xyz690/v2ray](https://github.com/xyz690/v2ray/tree/master) 安装简单方便，自动关闭防火墙，自动安装BBR加速。
+参考 Project V 官方文档 [下载安装](https://www.v2ray.com/chapter_00/install.html) 中的 [Linux 安装脚本](https://github.com/v2fly/fhs-install-v2ray)，为了方便后续脚本的执行安装，最好切换成 root 账户操作。
+
+```Shell
+bash <(curl -L -s https://install.direct/go.sh)
+```
+
+这里采用 [xyz690/v2ray](https://github.com/xyz690/v2ray/tree/master) 脚本，安装简单方便，自动关闭防火墙，自动安装BBR加速。
 
 ```Shell
 bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/go.sh)
 ```
+
 老鸟可以用这个自定义安装：
 
 ```Shell
 bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/install.sh)
 ```
 
+可自行阅读安装sh脚本，查看学习关闭防火墙和安装开启BBR的步骤，也可参考 [vultr安装v2ray手记](https://www.daehub.com/archives/8491.html) 和 [V2Ray完全使用教程](https://yearliny.com/v2ray-complete-tutorial/)。
+
+---
+
 可以输入 `v2ray -h` 查看帮助，确认是否安装成功。
 执行 `which v2ray` 可以查看 bash shell 安装 v2ray 的具体位置。
+v2ray 的配置文件路径为 `/etc/v2ray/config.json`。
 
 1. 脚本管理类命令：
 
