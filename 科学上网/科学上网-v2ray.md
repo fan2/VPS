@@ -157,3 +157,18 @@ outbounds 中至少配置了3条出口规则，tag分别是代理、直连和阻
     }
   },
 ```
+
+### share wlan
+
+[Share your computer network for Switch devices](https://xc.v2ray.cx/knowledgebase/364/Share-your-computer-network-for-Switch-devices.html) - Win **V2rayN**
+
+- [iPhone/iPad通过电脑局域网共享翻墙](https://github.com/bannedbook/fanqiang/blob/master/ios/fqByLan.md)
+
+[手机无客户端在局域网环境实现科学上网](https://www.cfmem.com/2021/08/blog-post.html)
+
+- Windows V2rayN, macOS V2rayU
+
+[v2ray是否可以局域网共享？](https://github.com/v2ray/v2ray-core/issues/210)
+
+1. Configure - advance settings 将 Local Http Listen Host 从默认的 127.0.0.0 修改为局域网IP或0.0.0.0，保存后重启 V2rayU。
+2. 手机 - 设置 - 无线局域网，点击📶后面的ℹ️，最底下 HTTP代理-配置代理，手动输入服务器IP（macOS的局域网IP）和端口即可。
