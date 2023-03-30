@@ -119,3 +119,9 @@ ssh -i ~/.ssh/id_rsa -o ServerAliveInterval=60 root@ip.ip.ip.ip
 ```
 
 [解决ssh连接一段时间后光标无响应问题](http://blog.csdn.net/u010521546/article/details/45623469)  
+
+## reinstall server
+
+Server Reinstall 或 Server Destroy 后 Deploy New Server，数据都会丢失。
+
+远端需要重新安装 v2ray 服务，如果复用 SSH Keys，本地需要移除 ~/.ssh/known_hosts 中对应 IP 的条目，重新 ping 或 SSH 接受新的 fingerprint 许可。
