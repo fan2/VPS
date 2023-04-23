@@ -81,7 +81,9 @@ Status 为 Installing：
 - Username: 管理员账户（root）  
 - Password: 默认密码  
 
-可通过 SSH 远程登录到服务器：`ssh root@ip`  
+可通过 SSH 命令远程登录到服务器：`ssh root@ip`。
+
+> 注意：服务器刚部署完，可能需要等一会儿才能连上。
 
 菜单中的 Settings 可以修改机器名（Change Hostname），不过需要 reinstall。
 

@@ -46,7 +46,15 @@ bash <(curl -L -s https://install.direct/go.sh)
 bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/go.sh)
 ```
 
-老鸟可以用这个自定义安装：
+脚本运行结束后，可以看到 V2Ray 配置信息：
+
+![V2Ray-Info](./images/V2Ray-Info.png)
+
+记住这个 V2Ray vmess URL，在 V2RayU 客户端中可基于这个 vmess URL 导入配置。
+
+---
+
+老鸟可以执行以下命令自定义安装：
 
 ```Shell
 bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/install.sh)
@@ -54,7 +62,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/xyz690/v2ray/master/install.
 
 可自行阅读安装sh脚本，查看学习关闭防火墙和安装开启BBR的步骤，也可参考 [vultr安装v2ray手记](https://www.daehub.com/archives/8491.html) 和 [V2Ray完全使用教程](https://yearliny.com/v2ray-complete-tutorial/)。
 
----
+#### v2ray cmds
 
 可以输入 `v2ray -h` 查看帮助，确认是否安装成功。
 执行 `which v2ray` 可以查看 bash shell 安装 v2ray 的具体位置。
@@ -96,6 +104,15 @@ macOS 安装最新的 V2rayU 3.3.0 客户端后，启动后右上角点开托盘
 2. `Global Mode`：全局模式，也可以选择 Pac、Manual 模式。
 3. `Configure`：Import 中直接输入 V2Ray vmess URL，切换到 Manual 可以看到自动解析出来的配置。
 4. `Servers`：如果配置了多个V2Ray链路节点，这里可以快捷切换。
+
+#### DNS 问题
+
+如果访问油管突然报错 “您没有联网，请检查网络连接”，可能是 DNS 解析出了问题。
+
+若在清除网站Cookie、命令行清除DNS缓存后，依然无法ping通youtube.com，请尝试添加以下DNS Servers：
+
+1. 114.114.114.114
+2. 8.8.8.8
 
 ### routing rule
 
