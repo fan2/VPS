@@ -113,9 +113,14 @@ Status 为 Installing：
 
 ## Server Location
 
-`Los Angeles`
+默认 New York，配置为 10 GB SSD, 1 vCPU, 0.5 GB Memory, 0.5 TB Bandwidth。
 
-如果选 Tokyo，IP 好像被封了！？
+支持两种最低价位：
+
+1. $2.50/month：IPv6 Only。
+2. $3.50/month：关闭备份。
+
+其他位置，例如 `Los Angeles` 等一般都是$5起步。
 
 ## Server Image
 

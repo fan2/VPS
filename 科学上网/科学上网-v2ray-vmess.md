@@ -113,6 +113,9 @@ macOS 安装最新的 V2rayU 3.3.0 客户端后，启动后右上角点开托盘
 
 1. 114.114.114.114
 2. 8.8.8.8
+3. 8.8.4.4
+
+[macOS 使用 VPN 可以访问 Youtube 无法访问 Google 的原因和解决方案](https://gist.github.com/xgqfrms/2947c754b9ffc1f40f7fd6e7bfbca60e)
 
 ### routing rule
 
